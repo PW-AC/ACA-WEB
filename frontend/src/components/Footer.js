@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#001F3C] border-t border-[#2a4a6b] py-8">
+    <footer className="bg-acencia-primary-900 border-t border-white/10 py-8">
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         
         {/* Desktop Layout */}
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-orange-500 text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
+              className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-acencia-accent text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
               aria-label="Zurück zum Seitenanfang"
             >
               <svg 
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-orange-500 text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
+              className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-acencia-accent text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
               aria-label="Zurück zum Seitenanfang"
             >
               <svg 
