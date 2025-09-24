@@ -29,13 +29,14 @@ const ServiceTeamPage = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
+      <main id="main-content" role="main">
       
       {/* Hero Section */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
               Unser <span className="text-acencia-accent">Service-Team</span>
             </h1>
@@ -51,7 +52,7 @@ const ServiceTeamPage = () => {
       </section>
 
       {/* Team Philosophy */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
@@ -103,7 +104,7 @@ const ServiceTeamPage = () => {
       </section>
 
       {/* Team Values */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
@@ -142,7 +143,7 @@ const ServiceTeamPage = () => {
       </section>
 
       {/* Team Leadership */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
@@ -186,7 +187,7 @@ const ServiceTeamPage = () => {
       </section>
 
       {/* Team Expansion Notice */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-blue-400/30 text-center">
             <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -236,6 +237,7 @@ const ServiceTeamPage = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

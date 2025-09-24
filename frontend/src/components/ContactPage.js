@@ -44,13 +44,13 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center u-header">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
               <span className="text-acencia-accent">Kontakt</span> aufnehmen
             </h1>
@@ -65,7 +65,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             

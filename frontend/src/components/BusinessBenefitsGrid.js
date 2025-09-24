@@ -127,7 +127,7 @@ const BusinessBenefitsGrid = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center u-header">
           <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6 font-heading">
             Die konkreten <span className="text-orange-400">Vorteile für Sie</span>
           </h2>

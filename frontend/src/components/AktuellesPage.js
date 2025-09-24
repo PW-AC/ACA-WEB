@@ -115,13 +115,14 @@ const AktuellesPage = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
+      <main id="main-content" role="main">
       
       {/* Hero Section - Same structure as main pages */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
               Aktuelles zur <span className="text-acencia-accent">bAV</span>
             </h1>
@@ -136,7 +137,7 @@ const AktuellesPage = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10 mb-12">
             <div className="flex flex-col md:flex-row gap-6 items-center">
@@ -267,6 +268,7 @@ const AktuellesPage = () => {
         </div>
       </section>
       
+      </main>
       <Footer />
     </div>
   );

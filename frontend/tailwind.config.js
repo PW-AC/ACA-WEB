@@ -55,7 +55,7 @@ module.exports = {
   			wider: '0.05em',
   			widest: '0.1em',
   		},
-  		colors: {
+			colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -96,26 +96,24 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-  			acencia: {
-  				// Primärfarben
-  				'primary-900': '#001f3d',
-  				'primary-400': '#88a9c3', 
-  				'primary-50': '#e3ebf2',
-  				'white': '#ffffff',
-  				// Sekundärfarben  
-  				'accent': '#fa9939',
-  				'accent-hover': '#e88a33',
-  				'accent-active': '#d67b2d',
-  				'accent-50': '#f8dcbf',
-  				// Legacy Support (für bestehende Verwendung)
-  				DEFAULT: '#001f3d',
-  				dark: '#001529', 
-  				light: '#0d2847',
-  				blue: '#88a9c3',
-  				'blue-light': '#e3ebf2',
-  				orange: '#fa9939',
-  				'orange-light': '#f8dcbf'
-  			}
+				acencia: {
+					'primary-900': 'var(--color-primary-900)',
+					'primary-400': 'var(--color-primary-400)', 
+					'primary-50': 'var(--color-primary-50)',
+					'white': 'var(--color-white)',
+					'accent': 'var(--color-accent)',
+					'accent-hover': 'var(--color-accent-hover)',
+					'accent-active': 'var(--color-accent-active)',
+					'accent-50': 'var(--color-accent-50)',
+					// Legacy aliases
+					DEFAULT: 'var(--color-primary-900)',
+					dark: '#001529', 
+					light: '#0d2847',
+					blue: 'var(--color-primary-400)',
+					'blue-light': 'var(--color-primary-50)',
+					orange: 'var(--color-accent)',
+					'orange-light': 'var(--color-accent-50)'
+				}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',

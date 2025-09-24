@@ -201,11 +201,11 @@ const DieBavPage = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
-      
+      <main id="main-content" role="main">
       {/* Hero Section - Dunkelblauer Hintergrund */}
-      <section className="u-hero" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -316,7 +316,7 @@ const DieBavPage = () => {
       </section>
 
       {/* Combined Definition & Challenges Section - Dunkelblauer Hintergrund */}
-      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
@@ -325,6 +325,9 @@ const DieBavPage = () => {
               <div 
                 className="cursor-pointer bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-black/40 transition-all duration-150 h-32 flex items-center"
                 onClick={() => setIsDefinitionExpanded(!isDefinitionExpanded)}
+                role="button"
+                aria-expanded={isDefinitionExpanded}
+                aria-controls="definition-panel"
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
@@ -351,7 +354,7 @@ const DieBavPage = () => {
               </div>
 
               {/* Definition Expandable Content */}
-              <div className={`transition-all duration-200 overflow-hidden ${
+              <div id="definition-panel" className={`transition-all duration-200 overflow-hidden ${
                 isDefinitionExpanded ? 'max-h-[1000px] opacity-100 mt-6' : 'max-h-0 opacity-0'
               }`}>
                 <div className="space-y-6">
@@ -435,6 +438,9 @@ const DieBavPage = () => {
               <div 
                 className="cursor-pointer bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-black/40 transition-all duration-150 h-32 flex items-center"
                 onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
+                role="button"
+                aria-expanded={isChallengesExpanded}
+                aria-controls="challenges-panel"
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
@@ -461,7 +467,7 @@ const DieBavPage = () => {
               </div>
 
               {/* Challenges Expandable Content */}
-              <div className={`transition-all duration-200 overflow-hidden ${
+              <div id="challenges-panel" className={`transition-all duration-200 overflow-hidden ${
                 isChallengesExpanded ? 'max-h-[1000px] opacity-100 mt-6' : 'max-h-0 opacity-0'
               }`}>
                 <div className="space-y-6">
@@ -510,9 +516,9 @@ const DieBavPage = () => {
       </section>
 
       {/* Process Support Section - Dunkelblauer Hintergrund */}
-      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-12 u-stack" style={{'--flow-space': 'clamp(12px,2.5vw,24px)'}}>
+          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>
@@ -588,7 +594,7 @@ const DieBavPage = () => {
       </section>
 
       {/* Benefits Section - Dunkelblauer Hintergrund */}
-      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
@@ -701,6 +707,7 @@ const DieBavPage = () => {
       
       {/* Das sagen unsere Kunden Section */}
       <GoogleReviews />
+      </main>
       
       <Footer />
     </div>

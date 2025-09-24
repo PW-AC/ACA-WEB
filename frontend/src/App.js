@@ -18,6 +18,7 @@ import BuvPage from "./components/BuvPage";
 import BuvPageX from "./components/BuvPageX";
 import { Toaster } from "./components/ui/toaster";
 import NotFoundPage from "./components/NotFoundPage";
+import StyleguidePage from "./components/StyleguidePage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
           <Route path="/impressum" element={<ImprintPage />} />
+          <Route path="/styleguide" element={<StyleguidePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Toaster />

@@ -61,10 +61,10 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="u-section" style={{backgroundColor: '#001f3d'}}>
+    <section className="u-section bg-acencia-primary-900">
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Header */}
-        <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
+        <div className="text-center mb-8 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
           <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
             Für jede Unternehmensgröße
           </h2>

@@ -18,7 +18,7 @@ const KontaktBeratungPage = () => {
           <div className="max-w-6xl mx-auto">
             
             {/* Hero Section */}
-            <div className="text-center mb-16">
+            <div className="text-center u-header">
               <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Individuelle Beratung

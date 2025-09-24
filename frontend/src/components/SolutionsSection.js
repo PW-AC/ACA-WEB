@@ -122,7 +122,7 @@ const SolutionsSection = () => {
         </div>
 
         {/* Solution Overview */}
-        <div className="text-center mb-12">
+        <div className="text-center u-header">
           <div className="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
             <span className="text-green-700 font-medium text-sm">Die Lösung</span>
