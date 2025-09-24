@@ -692,6 +692,14 @@ html {
   .u-section + .u-section {
     margin-block-start: clamp(12px, 2vw, 24px);
   }
+
+  /* Standardized header spacing utilities */
+  .u-header {
+    margin-bottom: clamp(8px, 1.6vw, 20px);
+  }
+  .u-header-tight {
+    margin-bottom: clamp(6px, 1.2vw, 16px);
+  }
   .u-stack > * + * {
     margin-block-start: var(--flow-space, clamp(12px, 2.4vw, 24px));
   }
