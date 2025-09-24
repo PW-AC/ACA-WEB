@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Frontend (React + CRACO)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,10 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### Start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+API-Aufrufe werden über `setupProxy.js` an `http://localhost:8000` geleitet, sofern keine `REACT_APP_BACKEND_URL` gesetzt ist. Das Backend benötigt lokal keine Datenbank.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -19,7 +21,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Build
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +31,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Env
+
+Siehe `.env.example`. Wichtige Variablen:
+
+- `REACT_APP_BACKEND_URL` Optional. Wenn gesetzt, nutzt der API-Client `REACT_APP_BACKEND_URL/api`.
+
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
