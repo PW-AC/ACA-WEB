@@ -7,12 +7,12 @@
 
 ## Schnellstart (Entwicklung)
 
-1) Backend starten
+1) Backend starten (ohne Datenbank)
 
 ```bash
 cd backend
-export MONGO_URL="mongodb://localhost:27017" # oder Produktions-URL
-export DB_NAME="acencia"
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 export CORS_ORIGINS="http://localhost:3000"
 uvicorn server:app --reload --host 0.0.0.0 --port 8000
 ```
@@ -31,6 +31,7 @@ Standard-URLs:
 - Backend: `http://localhost:8000`
 
 CRA-Proxy und `setupProxy.js` leiten `/api`-Requests automatisch an das Backend weiter. Alternativ `REACT_APP_BACKEND_URL` in `.env` setzen.
+Es ist keine lokale Datenbank notwendig; Server nutzt In-Memory Stores.
 
 ## API Kurzüberblick
 

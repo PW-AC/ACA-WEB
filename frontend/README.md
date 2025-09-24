@@ -11,7 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-API-Aufrufe werden über `setupProxy.js` an `http://localhost:8000` geleitet, sofern keine `REACT_APP_BACKEND_URL` gesetzt ist.
+API-Aufrufe werden über `setupProxy.js` an `http://localhost:8000` geleitet, sofern keine `REACT_APP_BACKEND_URL` gesetzt ist. Das Backend benötigt lokal keine Datenbank.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
