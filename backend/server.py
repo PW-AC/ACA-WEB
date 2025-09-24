@@ -25,8 +25,9 @@ db = client[os.environ['DB_NAME']]
 # Create the main app without a prefix
 app = FastAPI()
 
-# Create a router with the /api prefix
+# Create routers with versioning (support legacy /api and versioned /api/v1)
 api_router = APIRouter(prefix="/api")
+api_v1_router = APIRouter(prefix="/api/v1")
 
 
 # Define Models
@@ -101,6 +102,18 @@ Gesendet am: {datetime.now().strftime('%d.%m.%Y um %H:%M:%S')}
 async def root():
     return {"message": "Hello World"}
 
+@api_router.get("/healthz")
+async def healthz():
+    """Lightweight health check endpoint for uptime probes."""
+    try:
+        # Optional quick ping to database to ensure connectivity (non-fatal on error)
+        _ = await db.command("ping")
+        db_status = "ok"
+    except Exception:
+        db_status = "degraded"
+
+    return {"status": "ok", "db": db_status}
+
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.dict()
@@ -125,13 +138,20 @@ async def submit_contact_form(contact_data: ContactForm):
         logger.error(f"Unexpected error in contact form: {str(e)}")
         raise HTTPException(status_code=500, detail="Ein unerwarteter Fehler ist aufgetreten")
 
-# Include the router in the main app
-app.include_router(api_router)
+# Mirror all routes under /api/v1 as well
+api_v1_router.include_router(api_router)
 
+# Include routers in the main app
+app.include_router(api_router)
+app.include_router(api_v1_router)
+
+# Configure CORS
+_cors_origins = [origin.strip() for origin in os.environ.get('CORS_ORIGINS', '*').split(',') if origin.strip()]
+_wildcard = '*' in _cors_origins
 app.add_middleware(
     CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_credentials=False if _wildcard else True,
+    allow_origins=["*"] if _wildcard else _cors_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -146,3 +166,7 @@ logger = logging.getLogger(__name__)
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("server:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True)

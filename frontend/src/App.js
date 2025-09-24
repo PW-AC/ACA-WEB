@@ -17,6 +17,7 @@ import BkvPageX from "./components/BkvPageX";
 import BuvPage from "./components/BuvPage";
 import BuvPageX from "./components/BuvPageX";
 import { Toaster } from "./components/ui/toaster";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
           <Route path="/impressum" element={<ImprintPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Toaster />
       </BrowserRouter>

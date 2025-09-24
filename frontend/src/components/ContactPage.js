@@ -3,6 +3,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
 import { MapPin, Phone, Mail, Calendar, Send, CheckCircle } from "lucide-react";
+import { submitContactForm } from "@/lib/api";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -11,12 +13,27 @@ const ContactPage = () => {
     company: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would handle form submission
-    console.log('Form submitted:', formData);
-    // Reset form or show success message
+    try {
+      setSubmitting(true);
+      const response = await submitContactForm({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || undefined,
+        message: formData.message,
+      });
+      toast({ title: "Nachricht gesendet", description: response?.message || "Vielen Dank!" });
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      const errorMessage = error?.response?.data?.detail || "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.";
+      toast({ title: "Fehler", description: errorMessage });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -129,10 +146,11 @@ const ContactPage = () => {
 
                 <Button 
                   type="submit"
-                  className="w-full bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
+                  disabled={submitting}
+                  className="w-full bg-acencia-accent hover:bg-acencia-accent-hover disabled:opacity-60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Nachricht senden</span>
+                  <span>{submitting ? 'Wird gesendet...' : 'Nachricht senden'}</span>
                 </Button>
 
                 <p className="text-xs text-gray-400">
