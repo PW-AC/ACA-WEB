@@ -518,7 +518,7 @@ const DieBavPage = () => {
       {/* Process Support Section - Dunkelblauer Hintergrund */}
       <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-12 u-stack" style={{'--flow-space': 'clamp(12px,2.5vw,24px)'}}>
+          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>

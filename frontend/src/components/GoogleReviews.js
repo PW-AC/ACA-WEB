@@ -73,7 +73,7 @@ const GoogleReviews = () => {
     <section className="u-section overflow-hidden bg-acencia-primary-900">
       <div className="max-w-[1400px] mx-auto px-6 md:px-8">
         {/* Simple Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-3xl font-semibold mb-4 text-white tracking-tight">
             Das sagen unsere Kunden
           </h2>

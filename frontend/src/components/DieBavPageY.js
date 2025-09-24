@@ -74,7 +74,7 @@ const DieBavPageY = () => {
       {/* Hero Section - Same structure as main pages */}
       <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
               <span className="text-acencia-accent">Sicherheit</span> für später –<br />
               heute schon profitieren
