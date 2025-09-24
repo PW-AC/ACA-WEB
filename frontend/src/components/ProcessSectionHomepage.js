@@ -28,7 +28,7 @@ const ProcessSectionHomepage = () => {
   ];
 
   return (
-    <section className="bg-white py-20 relative overflow-hidden">
+    <section className="bg-white u-section relative overflow-hidden">
       {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute top-20 left-10 w-64 h-64 bg-orange-400 rounded-full blur-3xl"></div>
@@ -37,7 +37,7 @@ const ProcessSectionHomepage = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 u-stack animate-fade-in" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
           <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 text-display">
             Als Partner begleiten wir Sie entlang des gesamten 
             <span className="text-emphasis"> bAV-Prozesses</span>

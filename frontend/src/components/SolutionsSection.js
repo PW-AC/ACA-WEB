@@ -49,7 +49,7 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-slate-100 py-20 relative overflow-hidden">
+    <section className="bg-slate-100 u-section relative overflow-hidden">
       {/* Background geometric shapes */}
       <div className="absolute inset-0 opacity-5">
         <svg className="absolute top-0 left-0 w-96 h-96" viewBox="0 0 400 400">
@@ -59,7 +59,7 @@ const SolutionsSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.6vw,26px)'}}>
           <div className="inline-flex items-center space-x-2 bg-red-100 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 bg-red-500 rounded-full"></span>
             <span className="text-red-700 font-medium text-sm">Die Herausforderung</span>

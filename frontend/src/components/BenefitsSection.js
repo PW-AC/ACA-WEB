@@ -80,7 +80,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-24 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-slate-50 to-white u-section relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute top-20 left-10 w-72 h-72 bg-orange-400 rounded-full blur-3xl"></div>
@@ -90,7 +90,7 @@ const BenefitsSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced section header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 u-stack" style={{'--flow-space': 'clamp(12px,3vw,30px)'}}>
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-100 to-amber-100 px-6 py-3 rounded-full mb-8 shadow-lg">
             <Sparkles className="w-5 h-5 text-orange-600 animate-pulse" />
             <span className="text-orange-800 font-semibold text-sm tracking-wide uppercase">Entlastung für HR-Teams</span>
