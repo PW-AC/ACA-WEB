@@ -77,7 +77,7 @@ const ProcessSection = () => {
 
                 {/* Content */}
                 <div className="lg:col-span-7">
-                  <div className="bg-slate-800 rounded-2xl p-8 h-full hover:bg-slate-700 transition-colors duration-300 border border-slate-700 hover:border-orange-500/50">
+            <div className="bg-slate-800 rounded-2xl p-8 h-full hover:bg-slate-700 transition-colors duration-300 border border-slate-700 hover:border-orange-500/50 u-stack" style={{'--flow-space': 'clamp(12px,2vw,20px)'}}>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {step.title}
                     </h3>

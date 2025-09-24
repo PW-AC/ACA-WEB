@@ -8,7 +8,7 @@ const CustomerSegments = () => {
       subtitle: "5-50 Mitarbeiter",
       description: "Flexible und skalierbare bAV-Lösungen für junge Unternehmen mit schnellem Wachstum",
       icon: (
-        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="w-full h-full" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a1.96 1.96 0 0 0-2.91-.09z" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
@@ -23,7 +23,7 @@ const CustomerSegments = () => {
       subtitle: "50-1000 Mitarbeiter",
       description: "Bewährte Konzepte für etablierte mittelständische Betriebe mit komplexeren Anforderungen",
       icon: (
-        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="w-full h-full" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 21h18" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M5 21V9l7-5v17" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M19 21V11l-7-4" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
@@ -42,7 +42,7 @@ const CustomerSegments = () => {
       subtitle: "1000+ Mitarbeiter", 
       description: "Komplexe Enterprise-Lösungen für große Unternehmensstrukturen mit höchsten Anforderungen",
       icon: (
-        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="w-full h-full" viewBox="0 0 24 24" aria-hidden="true">
           <rect x="3" y="3" width="8" height="18" rx="1" stroke="#ecd2b8" strokeWidth="1.5" fill="none"/>
           <rect x="13" y="7" width="8" height="14" rx="1" stroke="#ecd2b8" strokeWidth="1.5" fill="none"/>
           <line x1="5" y1="6" x2="9" y2="6" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
@@ -61,10 +61,10 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+    <section className="u-section" style={{backgroundColor: '#001f3d'}}>
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
           <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
             Für jede Unternehmensgröße
           </h2>
@@ -85,8 +85,8 @@ const CustomerSegments = () => {
                 }}
               >
                 {/* Hexagon Badge */}
-                <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 w-24 h-24 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 7px 14px rgba(0,0,0,.2))'}}>
-                  <svg className="w-24 h-24 absolute inset-0" viewBox="0 0 100 100">
+                <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 hex-badge group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 7px 14px rgba(0,0,0,.2))'}}>
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
                     <polygon 
                       points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
                       fill="#092130"
@@ -105,7 +105,7 @@ const CustomerSegments = () => {
                   
                   {/* Icon Container - zentriert und angepasst */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="hex-badge-icon">
                       {segment.icon}
                     </div>
                   </div>

@@ -109,7 +109,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light min-h-[80vh] flex items-center overflow-hidden">
+    <section className="u-hero relative bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light min-h-[80vh] flex items-center overflow-hidden">
       {/* Enhanced geometric background patterns - wie zuvor mit Bewegung */}
       <div className="absolute inset-0">
         {/* Animated geometric SVG patterns */}

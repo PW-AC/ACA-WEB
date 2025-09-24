@@ -205,7 +205,7 @@ const DieBavPage = () => {
       <Header />
       
       {/* Hero Section - Dunkelblauer Hintergrund */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -316,7 +316,7 @@ const DieBavPage = () => {
       </section>
 
       {/* Combined Definition & Challenges Section - Dunkelblauer Hintergrund */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
@@ -510,9 +510,9 @@ const DieBavPage = () => {
       </section>
 
       {/* Process Support Section - Dunkelblauer Hintergrund */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 u-stack" style={{'--flow-space': 'clamp(12px,2.5vw,24px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>
@@ -588,9 +588,9 @@ const DieBavPage = () => {
       </section>
 
       {/* Benefits Section - Dunkelblauer Hintergrund */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Ihre Vorteile
             </h2>
@@ -610,9 +610,9 @@ const DieBavPage = () => {
                     borderRadius: '22px'
                   }}
                 >
-                  {/* Hexagon Badge */}
-                  <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 w-24 h-24 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 7px 14px rgba(0,0,0,.2))'}}>
-                    <svg className="w-24 h-24 absolute inset-0" viewBox="0 0 100 100">
+                {/* Hexagon Badge */}
+                <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 hex-badge group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 7px 14px rgba(0,0,0,.2))'}}>
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
                       <polygon 
                         points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
                         fill="#092130"
@@ -629,9 +629,9 @@ const DieBavPage = () => {
                       />
                     </svg>
                     
-                    {/* Icon Container - zentriert und vergrößert */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                  {/* Icon Container - zentriert und vergrößert */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="hex-badge-icon">
                         {card.icon}
                       </div>
                     </div>
