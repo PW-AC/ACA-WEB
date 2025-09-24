@@ -9,11 +9,12 @@ const ImprintPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
+      <main id="main-content" role="main">
       
       {/* Hero Section - Apple-like */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
@@ -30,7 +31,7 @@ const ImprintPage = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           {/* Company Information */}
@@ -166,6 +167,7 @@ const ImprintPage = () => {
         </div>
       </section>
       
+      </main>
       <Footer />
     </div>
   );

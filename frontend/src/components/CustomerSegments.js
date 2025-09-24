@@ -61,7 +61,7 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="u-section" style={{backgroundColor: '#001f3d'}}>
+    <section className="u-section bg-acencia-primary-900">
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Header */}
         <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>

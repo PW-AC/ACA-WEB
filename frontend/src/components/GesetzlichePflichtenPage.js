@@ -48,11 +48,11 @@ const GesetzlichePflichtenPage = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+    <div className="min-h-screen bg-acencia-primary-900">
       <Header />
-      
+      <main id="main-content" role="main">
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
+      <section className="u-hero bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
@@ -69,7 +69,7 @@ const GesetzlichePflichtenPage = () => {
       </section>
 
       {/* Two Boxes Side by Side Section */}
-      <section className="py-16 md:py-20">
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
@@ -149,7 +149,7 @@ const GesetzlichePflichtenPage = () => {
       </section>
 
       {/* Steuerrechtliche Grundlagen Section */}
-      <section className="py-16 md:py-20">
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
@@ -238,7 +238,7 @@ const GesetzlichePflichtenPage = () => {
       </section>
 
       {/* Pflichten & Chancen Section */}
-      <section className="py-16 md:py-20">
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
@@ -378,7 +378,7 @@ const GesetzlichePflichtenPage = () => {
       </section>
 
       {/* Risks Section */}
-      <section className="py-16 md:py-20">
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
@@ -410,7 +410,7 @@ const GesetzlichePflichtenPage = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 md:py-20">
+      <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
@@ -497,6 +497,7 @@ const GesetzlichePflichtenPage = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

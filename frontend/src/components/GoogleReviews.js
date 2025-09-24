@@ -70,7 +70,7 @@ const GoogleReviews = () => {
   const tripleReviews = [...reviews, ...reviews, ...reviews];
 
   return (
-    <section className="py-20 md:py-24 overflow-hidden" style={{backgroundColor: '#001f3d'}}>
+    <section className="u-section overflow-hidden bg-acencia-primary-900">
       <div className="max-w-[1400px] mx-auto px-6 md:px-8">
         {/* Simple Header */}
         <div className="text-center mb-12">
@@ -93,8 +93,8 @@ const GoogleReviews = () => {
         {/* Compact Testimonial Slider */}
         <div className="relative overflow-hidden">
           {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#001f3d] via-[#001f3d]/90 to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#001f3d] via-[#001f3d]/90 to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-acencia-primary-900 via-acencia-primary-900/90 to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-acencia-primary-900 via-acencia-primary-900/90 to-transparent z-20 pointer-events-none"></div>
           
           {/* Container */}
           <div className="relative -mx-6">
