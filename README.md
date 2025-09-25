@@ -2,7 +2,7 @@
 
 ## Struktur
 
-- `backend` FastAPI Service mit MongoDB (Motor)
+- `backend` FastAPI Service (ohne Datenbank, In-Memory Stores)
 - `frontend` React (CRA + CRACO + Tailwind)
 
 ## Schnellstart (Entwicklung)
@@ -36,7 +36,7 @@ Es ist keine lokale Datenbank notwendig; Server nutzt In-Memory Stores.
 ## API Kurzüberblick
 
 - `GET /api/` Hello World
-- `GET /api/healthz` Healthcheck `{ status, db }`
+- `GET /api/healthz` Healthcheck `{ status }`
 - `POST /api/status` Body: `{ client_name }`
 - `GET /api/status` Liste StatusChecks
 - `POST /api/contact` Body: `{ name, email, company?, message }`
