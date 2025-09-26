@@ -514,11 +514,8 @@ const DieBavPage = () => {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Ihre Vorteile
+              Warum Unternehmen auf ACENCIA setzen
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
-              Warum Unternehmen auf ACENCIA vertrauen
-            </p>
           </div>
           
           {/* Premium Cards - 4x1 Layout */}
@@ -620,77 +617,123 @@ const DieBavPage = () => {
       {/* Process Support Section - Dunkelblauer Hintergrund */}
       <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
+          <div className="text-center mb-12 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {processSupportCards.map((card, index) => (
-              <div 
-                key={index} 
-                className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
-                style={{
-                  borderRadius: '24px'
-                }}
-              >
-                {/* Collapsed State */}
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column - Cards stacked vertically */}
+            <div className="space-y-4">
+              {processSupportCards.map((card, index) => (
                 <div 
-                  className="p-6 flex flex-col items-center text-center"
-                  onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
+                  key={index} 
+                  className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-[1.02]"
+                  style={{
+                    borderRadius: '24px'
+                  }}
                 >
-                  <h3 className="text-lg font-semibold text-white mb-4">
-                    {card.title}
-                  </h3>
-                  
+                  {/* Collapsed State */}
                   <div 
-                    className="text-sm font-medium mb-3 px-3 py-1 rounded-full relative overflow-hidden"
-                    style={{
-                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
-                      color: '#0b2a3d'
-                    }}
+                    className="p-6 flex flex-col"
+                    onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
                   >
-                    <span className="relative z-10">{card.subtitle}</span>
-                    
-                    {/* Shine effect */}
-                    <div 
-                      className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
-                      style={{
-                        left: '-100%',
-                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
-                      }}
-                    ></div>
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-lg font-semibold text-white flex-1">
+                        {card.title}
+                      </h3>
+                      <div className="text-gray-300 ml-4 flex-shrink-0">
+                        {expandedProcessCard === index ? (
+                          <ChevronUp className="w-5 h-5" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5" />
+                        )}
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="text-gray-300 mt-2">
-                    {expandedProcessCard === index ? (
-                      <ChevronUp className="w-5 h-5" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5" />
-                    )}
-                  </div>
-                </div>
-
-                {/* Expanded Content */}
-                <div className={`transition-all duration-200 overflow-hidden ${
-                  expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                  <div className="px-6 pb-6">
-                    <div 
-                      className="pt-4"
-                      style={{
-                        borderTop: '1px solid rgba(236,210,184,.2)'
-                      }}
-                    >
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {card.description}
-                      </p>
+                  {/* Expanded Content */}
+                  <div className={`transition-all duration-200 overflow-hidden ${
+                    expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="px-6 pb-6">
+                      <div 
+                        className="pt-4"
+                        style={{
+                          borderTop: '1px solid rgba(255,255,255,.1)'
+                        }}
+                      >
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {card.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Right Column - Phone & Screen Mockup */}
+            <div className="flex items-center justify-center">
+              <div className="relative">
+                {/* Smartphone Device */}
+                <div className="relative flex justify-center h-[400px] w-[200px] border-4 border-gray-800 rounded-[2.5rem] bg-gray-900 shadow-2xl">
+                  {/* Screen */}
+                  <div className="absolute inset-4 bg-white rounded-[2rem] overflow-hidden">
+                    {/* Screen Content - ACENCIA App Interface */}
+                    <div className="h-full bg-gradient-to-b from-acencia-primary-900 to-acencia-primary-800 p-4">
+                      {/* App Header */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-white text-xs font-semibold">ACENCIA</div>
+                        <div className="flex space-x-1">
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Dashboard Cards */}
+                      <div className="space-y-3">
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">Mitarbeiter</div>
+                          <div className="text-white text-sm font-semibold">247 aktiv</div>
+                        </div>
+                        
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">bAV-Verträge</div>
+                          <div className="text-white text-sm font-semibold">189 verwaltet</div>
+                        </div>
+                        
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">Automatisierung</div>
+                          <div className="text-white text-sm font-semibold">98% digital</div>
+                        </div>
+                        
+                        <div className="bg-acencia-accent/20 border border-acencia-accent/40 rounded-lg p-3 mt-4">
+                          <div className="text-acencia-accent text-xs font-medium">Nächste Aktion</div>
+                          <div className="text-white text-xs mt-1">3 neue Anträge prüfen</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Notch */}
+                  <span className="absolute top-4 left-1/2 transform -translate-x-1/2 w-20 h-5 bg-gray-900 rounded-b-2xl" />
+                  
+                  {/* Side Buttons */}
+                  <span className="absolute -right-1 top-20 w-1 h-8 bg-gray-700 rounded-r-lg" />
+                  <span className="absolute -right-1 top-32 w-1 h-12 bg-gray-700 rounded-r-lg" />
+                  <span className="absolute -left-1 top-28 w-1 h-12 bg-gray-700 rounded-l-lg" />
+                </div>
+                
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs">
+                  Digitale Verwaltungsplattform
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
