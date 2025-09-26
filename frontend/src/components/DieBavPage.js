@@ -509,84 +509,6 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Process Support Section - Dunkelblauer Hintergrund */}
-      <section className="u-section bg-acencia-primary-900">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
-            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Wir begleiten Sie entlang aller Prozesse - dauerhaft
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {processSupportCards.map((card, index) => (
-              <div 
-                key={index} 
-                className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
-                style={{
-                  borderRadius: '24px'
-                }}
-              >
-                {/* Collapsed State */}
-                <div 
-                  className="p-6 flex flex-col items-center text-center"
-                  onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
-                >
-                  <h3 className="text-lg font-semibold text-white mb-4">
-                    {card.title}
-                  </h3>
-                  
-                  <div 
-                    className="text-sm font-medium mb-3 px-3 py-1 rounded-full relative overflow-hidden"
-                    style={{
-                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
-                      color: '#0b2a3d'
-                    }}
-                  >
-                    <span className="relative z-10">{card.subtitle}</span>
-                    
-                    {/* Shine effect */}
-                    <div 
-                      className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
-                      style={{
-                        left: '-100%',
-                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
-                      }}
-                    ></div>
-                  </div>
-
-                  <div className="text-gray-300 mt-2">
-                    {expandedProcessCard === index ? (
-                      <ChevronUp className="w-5 h-5" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5" />
-                    )}
-                  </div>
-                </div>
-
-                {/* Expanded Content */}
-                <div className={`transition-all duration-200 overflow-hidden ${
-                  expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                  <div className="px-6 pb-6">
-                    <div 
-                      className="pt-4"
-                      style={{
-                        borderTop: '1px solid rgba(236,210,184,.2)'
-                      }}
-                    >
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {card.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section - Dunkelblauer Hintergrund */}
       <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
@@ -688,6 +610,84 @@ const DieBavPage = () => {
                 {/* Description direkt unter der Karte */}
                 <div className="text-center">
                   <p className="text-gray-300 text-sm leading-relaxed px-2">{card.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Support Section - Dunkelblauer Hintergrund */}
+      <section className="u-section bg-acencia-primary-900">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
+              Wir begleiten Sie entlang aller Prozesse - dauerhaft
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {processSupportCards.map((card, index) => (
+              <div 
+                key={index} 
+                className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
+                style={{
+                  borderRadius: '24px'
+                }}
+              >
+                {/* Collapsed State */}
+                <div 
+                  className="p-6 flex flex-col items-center text-center"
+                  onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
+                >
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    {card.title}
+                  </h3>
+                  
+                  <div 
+                    className="text-sm font-medium mb-3 px-3 py-1 rounded-full relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
+                      color: '#0b2a3d'
+                    }}
+                  >
+                    <span className="relative z-10">{card.subtitle}</span>
+                    
+                    {/* Shine effect */}
+                    <div 
+                      className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
+                      style={{
+                        left: '-100%',
+                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
+                      }}
+                    ></div>
+                  </div>
+
+                  <div className="text-gray-300 mt-2">
+                    {expandedProcessCard === index ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </div>
+                </div>
+
+                {/* Expanded Content */}
+                <div className={`transition-all duration-200 overflow-hidden ${
+                  expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="px-6 pb-6">
+                    <div 
+                      className="pt-4"
+                      style={{
+                        borderTop: '1px solid rgba(236,210,184,.2)'
+                      }}
+                    >
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
