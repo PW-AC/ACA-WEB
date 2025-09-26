@@ -675,11 +675,63 @@ const DieBavPage = () => {
               ))}
             </div>
 
-            {/* Right Column - Placeholder for Phone & Screen Mockup */}
+            {/* Right Column - Phone & Screen Mockup */}
             <div className="flex items-center justify-center">
-              {/* Placeholder for future content */}
-              <div className="text-gray-500 text-center">
-                {/* Space reserved for phone & screen mockup */}
+              <div className="relative">
+                {/* Smartphone Device */}
+                <div className="relative flex justify-center h-[400px] w-[200px] border-4 border-gray-800 rounded-[2.5rem] bg-gray-900 shadow-2xl">
+                  {/* Screen */}
+                  <div className="absolute inset-4 bg-white rounded-[2rem] overflow-hidden">
+                    {/* Screen Content - ACENCIA App Interface */}
+                    <div className="h-full bg-gradient-to-b from-acencia-primary-900 to-acencia-primary-800 p-4">
+                      {/* App Header */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-white text-xs font-semibold">ACENCIA</div>
+                        <div className="flex space-x-1">
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Dashboard Cards */}
+                      <div className="space-y-3">
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">Mitarbeiter</div>
+                          <div className="text-white text-sm font-semibold">247 aktiv</div>
+                        </div>
+                        
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">bAV-Verträge</div>
+                          <div className="text-white text-sm font-semibold">189 verwaltet</div>
+                        </div>
+                        
+                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
+                          <div className="text-acencia-accent text-xs mb-1">Automatisierung</div>
+                          <div className="text-white text-sm font-semibold">98% digital</div>
+                        </div>
+                        
+                        <div className="bg-acencia-accent/20 border border-acencia-accent/40 rounded-lg p-3 mt-4">
+                          <div className="text-acencia-accent text-xs font-medium">Nächste Aktion</div>
+                          <div className="text-white text-xs mt-1">3 neue Anträge prüfen</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Notch */}
+                  <span className="absolute top-4 left-1/2 transform -translate-x-1/2 w-20 h-5 bg-gray-900 rounded-b-2xl" />
+                  
+                  {/* Side Buttons */}
+                  <span className="absolute -right-1 top-20 w-1 h-8 bg-gray-700 rounded-r-lg" />
+                  <span className="absolute -right-1 top-32 w-1 h-12 bg-gray-700 rounded-r-lg" />
+                  <span className="absolute -left-1 top-28 w-1 h-12 bg-gray-700 rounded-l-lg" />
+                </div>
+                
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs">
+                  Digitale Verwaltungsplattform
+                </div>
               </div>
             </div>
           </div>
