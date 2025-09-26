@@ -681,9 +681,9 @@ const DieBavPage = () => {
                 {/* Smartphone Device */}
                 <div className="relative flex justify-center h-[480px] w-[240px] bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] shadow-2xl border border-gray-700/50" style={{boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1)'}}>
                   {/* Screen */}
-                  <div className="absolute inset-[3px] bg-black rounded-[2.7rem] overflow-hidden" style={{boxShadow: 'inset 0 0 0 1px rgba(255, 255, 255, 0.05)'}}>
+                  <div className="absolute inset-[3px] bg-black rounded-[2.7rem] overflow-hidden">
                     {/* Status Bar */}
-                    <div className="flex items-center justify-between px-6 py-2 bg-black/20">
+                    <div className="flex items-center justify-between px-6 py-2 bg-black/30">
                       <div className="flex items-center space-x-1">
                         <div className="text-white text-xs font-medium">9:41</div>
                       </div>
@@ -721,62 +721,35 @@ const DieBavPage = () => {
                         <div className="text-white text-xl font-semibold">HR Dashboard</div>
                       </div>
                       
-                      {/* Dashboard Cards */}
+                      {/* Dashboard Cards - 3 Interactive Buttons */}
                       <div className="space-y-4">
-                        <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                        <button className="w-full bg-white/20 hover:bg-white/25 rounded-xl p-4 border border-white/20 transition-all duration-200 active:scale-95">
                           <div className="flex items-center justify-between mb-2">
                             <div className="text-acencia-accent text-sm font-medium">Mitarbeiter</div>
                             <Users className="w-4 h-4 text-acencia-accent" />
                           </div>
-                          <div className="text-white text-2xl font-bold">247</div>
-                          <div className="text-white/70 text-xs">aktiv verwaltet</div>
-                        </div>
+                          <div className="text-white text-2xl font-bold text-left">247</div>
+                          <div className="text-white/80 text-xs text-left">aktiv</div>
+                        </button>
                         
-                        <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                        <button className="w-full bg-white/20 hover:bg-white/25 rounded-xl p-4 border border-white/20 transition-all duration-200 active:scale-95">
                           <div className="flex items-center justify-between mb-2">
                             <div className="text-acencia-accent text-sm font-medium">bAV-Verträge</div>
                             <Shield className="w-4 h-4 text-acencia-accent" />
                           </div>
-                          <div className="text-white text-2xl font-bold">189</div>
-                          <div className="text-white/70 text-xs">digital verwaltet</div>
-                        </div>
+                          <div className="text-white text-2xl font-bold text-left">189</div>
+                          <div className="text-white/80 text-xs text-left">verwaltet</div>
+                        </button>
                         
-                        <div className="bg-gradient-to-r from-acencia-accent/20 to-acencia-accent/10 border border-acencia-accent/30 rounded-xl p-4 mt-6">
+                        <button className="w-full bg-gradient-to-r from-acencia-accent/20 to-acencia-accent/10 hover:from-acencia-accent/30 hover:to-acencia-accent/20 border border-acencia-accent/30 rounded-xl p-4 transition-all duration-200 active:scale-95">
                           <div className="flex items-center justify-between mb-2">
                             <div className="text-acencia-accent text-sm font-semibold">GeVo Melden</div>
                             <div className="w-6 h-6 bg-acencia-accent rounded-full flex items-center justify-center">
                               <ArrowRight className="w-3 h-3 text-acencia-primary-900" />
                             </div>
                           </div>
-                          <div className="text-white text-sm">3 neue Anträge prüfen</div>
-                          <div className="text-white/60 text-xs mt-1">Heute verfügbar</div>
-                        </div>
-                      </div>
-                      
-                      {/* Bottom Navigation */}
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-3 border border-white/10">
-                          <div className="flex items-center justify-around">
-                            <div className="flex flex-col items-center space-y-1">
-                              <div className="w-6 h-6 bg-acencia-accent/20 rounded-lg flex items-center justify-center">
-                                <TrendingUp className="w-3 h-3 text-acencia-accent" />
-                              </div>
-                              <div className="text-white/60 text-xs">Dashboard</div>
-                            </div>
-                            <div className="flex flex-col items-center space-y-1">
-                              <div className="w-6 h-6 rounded-lg flex items-center justify-center">
-                                <Users className="w-3 h-3 text-white/40" />
-                              </div>
-                              <div className="text-white/40 text-xs">Mitarbeiter</div>
-                            </div>
-                            <div className="flex flex-col items-center space-y-1">
-                              <div className="w-6 h-6 rounded-lg flex items-center justify-center">
-                                <Settings className="w-3 h-3 text-white/40" />
-                              </div>
-                              <div className="text-white/40 text-xs">Einstellungen</div>
-                            </div>
-                          </div>
-                        </div>
+                          <div className="text-white text-sm text-left">3 neue Anträge prüfen</div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -796,11 +769,6 @@ const DieBavPage = () => {
                   <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full"></div>
                 </div>
                 
-                {/* Decorative Elements */}
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center">
-                  <div className="text-gray-400 text-sm font-medium">Digitale bAV-Plattform</div>
-                  <div className="text-gray-500 text-xs mt-1">Professionelle Verwaltung</div>
-                </div>
               </div>
             </div>
           </div>
