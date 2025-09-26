@@ -98,7 +98,7 @@ async def root():
 @api_router.get("/healthz")
 async def healthz():
     """Lightweight health check endpoint for uptime probes."""
-    return {"status": "ok", "db": "disabled"}
+    return {"status": "ok"}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
