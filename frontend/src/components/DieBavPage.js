@@ -679,58 +679,127 @@ const DieBavPage = () => {
             <div className="flex items-center justify-center">
               <div className="relative">
                 {/* Smartphone Device */}
-                <div className="relative flex justify-center h-[400px] w-[200px] border-4 border-gray-800 rounded-[2.5rem] bg-gray-900 shadow-2xl">
+                <div className="relative flex justify-center h-[480px] w-[240px] bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] shadow-2xl border border-gray-700/50" style={{boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1)'}}>
                   {/* Screen */}
-                  <div className="absolute inset-4 bg-white rounded-[2rem] overflow-hidden">
+                  <div className="absolute inset-[3px] bg-black rounded-[2.7rem] overflow-hidden" style={{boxShadow: 'inset 0 0 0 1px rgba(255, 255, 255, 0.05)'}}>
+                    {/* Status Bar */}
+                    <div className="flex items-center justify-between px-6 py-2 bg-black/20">
+                      <div className="flex items-center space-x-1">
+                        <div className="text-white text-xs font-medium">9:41</div>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <div className="w-4 h-2 border border-white/60 rounded-sm">
+                          <div className="w-3 h-1 bg-white rounded-sm m-0.5"></div>
+                        </div>
+                        <div className="flex space-x-0.5">
+                          <div className="w-1 h-2 bg-white/80 rounded-full"></div>
+                          <div className="w-1 h-2 bg-white/60 rounded-full"></div>
+                          <div className="w-1 h-2 bg-white/40 rounded-full"></div>
+                          <div className="w-1 h-2 bg-white/20 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
                     {/* Screen Content - ACENCIA App Interface */}
-                    <div className="h-full bg-gradient-to-b from-acencia-primary-900 to-acencia-primary-800 p-4">
+                    <div className="h-full bg-gradient-to-br from-acencia-primary-900 via-acencia-primary-800 to-acencia-primary-900 p-6 pb-8">
                       {/* App Header */}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-white text-xs font-semibold">ACENCIA</div>
-                        <div className="flex space-x-1">
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                      <div className="flex items-center justify-between mb-6 pt-2">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-acencia-accent rounded-lg flex items-center justify-center">
+                            <div className="text-acencia-primary-900 text-xs font-bold">A</div>
+                          </div>
+                          <div className="text-white text-lg font-semibold tracking-wide">ACENCIA</div>
+                        </div>
+                        <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                          <UserCheck className="w-4 h-4 text-white" />
                         </div>
                       </div>
                       
+                      {/* Welcome Section */}
+                      <div className="mb-6">
+                        <div className="text-white/80 text-sm mb-1">Guten Morgen</div>
+                        <div className="text-white text-xl font-semibold">HR Dashboard</div>
+                      </div>
+                      
                       {/* Dashboard Cards */}
-                      <div className="space-y-3">
-                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
-                          <div className="text-acencia-accent text-xs mb-1">Mitarbeiter</div>
-                          <div className="text-white text-sm font-semibold">247 aktiv</div>
+                      <div className="space-y-4">
+                        <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="text-acencia-accent text-sm font-medium">Mitarbeiter</div>
+                            <Users className="w-4 h-4 text-acencia-accent" />
+                          </div>
+                          <div className="text-white text-2xl font-bold">247</div>
+                          <div className="text-white/70 text-xs">aktiv verwaltet</div>
                         </div>
                         
-                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
-                          <div className="text-acencia-accent text-xs mb-1">bAV-Verträge</div>
-                          <div className="text-white text-sm font-semibold">189 verwaltet</div>
+                        <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="text-acencia-accent text-sm font-medium">bAV-Verträge</div>
+                            <Shield className="w-4 h-4 text-acencia-accent" />
+                          </div>
+                          <div className="text-white text-2xl font-bold">189</div>
+                          <div className="text-white/70 text-xs">digital verwaltet</div>
                         </div>
                         
-                        <div className="bg-white/10 backdrop-blur rounded-lg p-3">
-                          <div className="text-acencia-accent text-xs mb-1">Automatisierung</div>
-                          <div className="text-white text-sm font-semibold">98% digital</div>
+                        <div className="bg-gradient-to-r from-acencia-accent/20 to-acencia-accent/10 border border-acencia-accent/30 rounded-xl p-4 mt-6">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="text-acencia-accent text-sm font-semibold">GeVo Melden</div>
+                            <div className="w-6 h-6 bg-acencia-accent rounded-full flex items-center justify-center">
+                              <ArrowRight className="w-3 h-3 text-acencia-primary-900" />
+                            </div>
+                          </div>
+                          <div className="text-white text-sm">3 neue Anträge prüfen</div>
+                          <div className="text-white/60 text-xs mt-1">Heute verfügbar</div>
                         </div>
-                        
-                        <div className="bg-acencia-accent/20 border border-acencia-accent/40 rounded-lg p-3 mt-4">
-                          <div className="text-acencia-accent text-xs font-medium">Nächste Aktion</div>
-                          <div className="text-white text-xs mt-1">3 neue Anträge prüfen</div>
+                      </div>
+                      
+                      {/* Bottom Navigation */}
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-3 border border-white/10">
+                          <div className="flex items-center justify-around">
+                            <div className="flex flex-col items-center space-y-1">
+                              <div className="w-6 h-6 bg-acencia-accent/20 rounded-lg flex items-center justify-center">
+                                <TrendingUp className="w-3 h-3 text-acencia-accent" />
+                              </div>
+                              <div className="text-white/60 text-xs">Dashboard</div>
+                            </div>
+                            <div className="flex flex-col items-center space-y-1">
+                              <div className="w-6 h-6 rounded-lg flex items-center justify-center">
+                                <Users className="w-3 h-3 text-white/40" />
+                              </div>
+                              <div className="text-white/40 text-xs">Mitarbeiter</div>
+                            </div>
+                            <div className="flex flex-col items-center space-y-1">
+                              <div className="w-6 h-6 rounded-lg flex items-center justify-center">
+                                <Settings className="w-3 h-3 text-white/40" />
+                              </div>
+                              <div className="text-white/40 text-xs">Einstellungen</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Notch */}
-                  <span className="absolute top-4 left-1/2 transform -translate-x-1/2 w-20 h-5 bg-gray-900 rounded-b-2xl" />
+                  {/* Dynamic Island / Notch */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full border border-gray-800" style={{boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.5)'}}></div>
                   
-                  {/* Side Buttons */}
-                  <span className="absolute -right-1 top-20 w-1 h-8 bg-gray-700 rounded-r-lg" />
-                  <span className="absolute -right-1 top-32 w-1 h-12 bg-gray-700 rounded-r-lg" />
-                  <span className="absolute -left-1 top-28 w-1 h-12 bg-gray-700 rounded-l-lg" />
+                  {/* Side Buttons - More realistic */}
+                  <div className="absolute -right-[2px] top-24 w-[3px] h-12 bg-gradient-to-b from-gray-600 to-gray-800 rounded-r-lg shadow-lg"></div>
+                  <div className="absolute -right-[2px] top-40 w-[3px] h-16 bg-gradient-to-b from-gray-600 to-gray-800 rounded-r-lg shadow-lg"></div>
+                  <div className="absolute -left-[2px] top-32 w-[3px] h-16 bg-gradient-to-b from-gray-600 to-gray-800 rounded-l-lg shadow-lg"></div>
+                  
+                  {/* Speaker Grille */}
+                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-700 rounded-full"></div>
+                  
+                  {/* Home Indicator */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full"></div>
                 </div>
                 
                 {/* Decorative Elements */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs">
-                  Digitale Verwaltungsplattform
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+                  <div className="text-gray-400 text-sm font-medium">Digitale bAV-Plattform</div>
+                  <div className="text-gray-500 text-xs mt-1">Professionelle Verwaltung</div>
                 </div>
               </div>
             </div>
