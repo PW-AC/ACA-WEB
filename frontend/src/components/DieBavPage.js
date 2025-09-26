@@ -10,7 +10,7 @@ import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckC
 const DieBavPage = () => {
   const [isChallengesExpanded, setIsChallengesExpanded] = useState(false);
   const [isDefinitionExpanded, setIsDefinitionExpanded] = useState(false);
-  const [expandedProcessCard, setExpandedProcessCard] = useState(null);
+  const [expandedProcessCards, setExpandedProcessCards] = useState([]);
   const location = useLocation();
   const [autoplay, setAutoplay] = useState(false);
   const [showVideoOverlay, setShowVideoOverlay] = useState(false);
@@ -638,14 +638,14 @@ const DieBavPage = () => {
                   {/* Collapsed State */}
                   <div 
                     className="p-6 flex flex-col"
-                    onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
+                    onClick={() => setExpandedProcessCards((prev) => prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index])}
                   >
                     <div className="flex items-start justify-between">
                       <h3 className="text-lg font-semibold text-white flex-1">
                         {card.title}
                       </h3>
                       <div className="text-gray-300 ml-4 flex-shrink-0">
-                        {expandedProcessCard === index ? (
+                        {expandedProcessCards.includes(index) ? (
                           <ChevronUp className="w-5 h-5" />
                         ) : (
                           <ChevronDown className="w-5 h-5" />
@@ -656,7 +656,7 @@ const DieBavPage = () => {
 
                   {/* Expanded Content */}
                   <div className={`transition-all duration-200 overflow-hidden ${
-                    expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    expandedProcessCards.includes(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     <div className="px-6 pb-6">
                       <div 
