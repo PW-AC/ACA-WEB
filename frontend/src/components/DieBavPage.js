@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import CustomerSegments from "./CustomerSegments";
 import GoogleReviews from "./GoogleReviews";
 import { Button } from "./ui/button";
-import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckCircle, ChevronDown, ChevronUp, Play, FileCheck, Settings, MessageCircle, PiggyBank, DollarSign, UserCheck, Heart } from "lucide-react";
+import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckCircle, ChevronDown, ChevronUp, Play, FileCheck, Settings, MessageCircle, DollarSign, UserCheck, Heart } from "lucide-react";
 
 const DieBavPage = () => {
   const [isChallengesExpanded, setIsChallengesExpanded] = useState(false);
@@ -142,12 +142,6 @@ const DieBavPage = () => {
       subtitle: "Wir begeistern Ihre Mitarbeitenden.",
       description: "Wir informieren über Ansprüche und beraten individuell – digital oder persönlich, verständlich und wertschätzend.",
       icon: <MessageCircle className="w-6 h-6" />
-    },
-    {
-      title: "Steuervorteile & Kostenoptimierung",
-      subtitle: "Wir schaffen Mehrwert.",
-      description: "Durch Entgeltumwandlung sparen Unternehmen und Mitarbeitende Steuern und Sozialabgaben – das senkt Kosten und steigert Ihre Attraktivität als Arbeitgeber.",
-      icon: <PiggyBank className="w-6 h-6" />
     }
   ];
 
