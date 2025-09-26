@@ -617,77 +617,71 @@ const DieBavPage = () => {
       {/* Process Support Section - Dunkelblauer Hintergrund */}
       <section className="u-section bg-acencia-primary-900">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-6 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
+          <div className="text-center mb-12 u-stack" style={{'--flow-space': 'clamp(8px,2vw,16px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {processSupportCards.map((card, index) => (
-              <div 
-                key={index} 
-                className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
-                style={{
-                  borderRadius: '24px'
-                }}
-              >
-                {/* Collapsed State */}
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column - Cards stacked vertically */}
+            <div className="space-y-4">
+              {processSupportCards.map((card, index) => (
                 <div 
-                  className="p-6 flex flex-col items-center text-center"
-                  onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
+                  key={index} 
+                  className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-[1.02]"
+                  style={{
+                    borderRadius: '24px'
+                  }}
                 >
-                  <h3 className="text-lg font-semibold text-white mb-4">
-                    {card.title}
-                  </h3>
-                  
+                  {/* Collapsed State */}
                   <div 
-                    className="text-sm font-medium mb-3 px-3 py-1 rounded-full relative overflow-hidden"
-                    style={{
-                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
-                      color: '#0b2a3d'
-                    }}
+                    className="p-6 flex flex-col"
+                    onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
                   >
-                    <span className="relative z-10">{card.subtitle}</span>
-                    
-                    {/* Shine effect */}
-                    <div 
-                      className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
-                      style={{
-                        left: '-100%',
-                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
-                      }}
-                    ></div>
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-lg font-semibold text-white flex-1">
+                        {card.title}
+                      </h3>
+                      <div className="text-gray-300 ml-4 flex-shrink-0">
+                        {expandedProcessCard === index ? (
+                          <ChevronUp className="w-5 h-5" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5" />
+                        )}
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="text-gray-300 mt-2">
-                    {expandedProcessCard === index ? (
-                      <ChevronUp className="w-5 h-5" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5" />
-                    )}
-                  </div>
-                </div>
-
-                {/* Expanded Content */}
-                <div className={`transition-all duration-200 overflow-hidden ${
-                  expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                  <div className="px-6 pb-6">
-                    <div 
-                      className="pt-4"
-                      style={{
-                        borderTop: '1px solid rgba(236,210,184,.2)'
-                      }}
-                    >
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {card.description}
-                      </p>
+                  {/* Expanded Content */}
+                  <div className={`transition-all duration-200 overflow-hidden ${
+                    expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="px-6 pb-6">
+                      <div 
+                        className="pt-4"
+                        style={{
+                          borderTop: '1px solid rgba(255,255,255,.1)'
+                        }}
+                      >
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {card.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Right Column - Placeholder for Phone & Screen Mockup */}
+            <div className="flex items-center justify-center">
+              {/* Placeholder for future content */}
+              <div className="text-gray-500 text-center">
+                {/* Space reserved for phone & screen mockup */}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
