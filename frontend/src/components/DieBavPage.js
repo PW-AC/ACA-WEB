@@ -514,11 +514,8 @@ const DieBavPage = () => {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16 u-stack" style={{'--flow-space': 'clamp(12px,2.8vw,28px)'}}>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Ihre Vorteile
+              Warum Unternehmen auf ACENCIA setzen
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
-              Warum Unternehmen auf ACENCIA vertrauen
-            </p>
           </div>
           
           {/* Premium Cards - 4x1 Layout */}
